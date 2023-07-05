@@ -1,0 +1,8 @@
+1.查看Readmetxt中的内容
+2、在Config.xm1文件中配置服务器的信息
+3、Config.xml配置完成后，在cmd中切换到jar包的目录下，执行run命令例如:
+run start:运行nmon文件 
+run setup :安装nmon文件 I 
+run stop :停止nmon
+run download:下载nmon结果 
+run Uninstall :卸载nmon

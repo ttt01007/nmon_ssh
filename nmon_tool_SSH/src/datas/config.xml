@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <BasicInfo>
+        <NmonHome>D:</NmonHome>
+        <ResultHome>D:</ResultHome>
+        <NmonArgs>-F te.nmon -s 5 -c 5</NmonArgs>
+    </BasicInfo>
+    <ServerTypeInfo>
+        <OSType>AIX</OSType>
+        <NmonFileName>nmon</NmonFileName>
+        <cd>cd</cd>
+        <ls>ls</ls>
+        <rmNmon>rm -f *.nmon</rmNmon>
+        <mkdir>mkdir -m 777</mkdir>
+        <chmod>chmod -R 777</chmod>
+        <psNmon>ps -ef|grep nmon|grep -v grep |awk '{print $2}'</psNmon>
+        <killNmon>kill -9</killNmon>
+    </ServerTypeInfo>
+    <ServerTypeInfo>
+        <OSType>LINUX</OSType>
+        <NmonFileName>nmon</NmonFileName>
+        <cd>cd</cd>
+        <ls>ls</ls>
+        <rmNmon>rm -f *.nmon</rmNmon>
+        <mkdir>mkdir -m 777</mkdir>
+        <chmod>chmod -R 777</chmod>
+        <psNmon>ps -ef|grep nmon|grep -v grep |awk '{print $2}'</psNmon>
+        <killNmon>kill -9</killNmon>
+    </ServerTypeInfo>
+    <ServerConf>
+        <OSType>LINUX</OSType>
+        <IP>192.168.145.128</IP>
+        <Port>22</Port>
+        <UserName>root</UserName>
+        <Password>ttt01007</Password>
+        <Nmon>/home/nmon</Nmon>
+    </ServerConf>
+</root>

@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="nmon_tool_SSH:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/nmon_tool_SSH_jar</output-path>
+    <root id="archive" name="nmon_tool_SSH.jar">
+      <element id="module-output" name="nmon_tool_SSH" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/nmon_tool_SSH/lib/log4j-1.2.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/nmon_tool_SSH/lib/orion-ssh2-214.jar" path-in-jar="/" />
+      <element id="dir-copy" path="$PROJECT_DIR$/nmon_tool_SSH/lib" />
+      <element id="library" level="project" name="lib" />
+    </root>
+  </artifact>
+</component>

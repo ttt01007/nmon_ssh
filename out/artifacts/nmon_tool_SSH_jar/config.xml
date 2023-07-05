@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <BasicInfo>
+		<!--**************基础信息配置**************-->
+		<!--**************NmonHome表示windows下nmon监控工具存放路径后面以\结束 ResultHome表示我们要把监控后的nmon结果存放的路径 NmonArgs表示监控执行的命令**************-->
+		<!--**************生成nmon结果格式：ip地址+自定义名称**************-->
+        <NmonHome>D:\</NmonHome>
+        <ResultHome>D:\</ResultHome>
+        <NmonArgs>./nmon -F te.nmon -s 5 -c 5</NmonArgs>
+    </BasicInfo>
+	<!--***************服务器类型配置*********************-->
+	<!--***************OSType与下面<ServerConf>中的OSType内容必须一致 NmonFileName是<BasicInfo>中<NmonHome>路径下的要上传的nmon工具***********************-->
+    <ServerTypeConf>
+        <OSType>AIX</OSType>
+        <NmonFileName>nmon</NmonFileName>
+        <cd>cd</cd>
+        <ls>ls</ls>
+        <rmNmon>rm -f *.nmon</rmNmon>
+        <mkdir>mkdir -m 777</mkdir>
+        <chmod>chmod -R 777</chmod>
+        <psNmon>ps -ef|grep nmon|grep -v grep |awk '{print $2}'</psNmon>
+        <killNmon>kill -9</killNmon>
+    </ServerTypeConf>
+    <ServerTypeConf>
+        <OSType>LINUX</OSType>
+        <NmonFileName>nmon</NmonFileName>
+        <cd>cd</cd>
+        <ls>ls</ls>
+        <rmNmon>rm -f *.nmon</rmNmon>
+        <mkdir>mkdir -m 777</mkdir>
+        <chmod>chmod -R 777</chmod>
+        <psNmon>ps -ef|grep nmon|grep -v grep |awk '{print $2}'</psNmon>
+        <killNmon>kill -9</killNmon>
+    </ServerTypeConf>
+	<!--**************被监控服务器配置信息******************-->
+	<!--**************OStpe要与ServerTypeConf中的OSType一致 NmonRoot为nmon工具要上传的路径喝执行nmon后结果存放的路径******************-->
+    <ServerConf>
+        <OSType>LINUX</OSType>
+        <IP>192.168.145.128</IP>
+        <Port>22</Port>
+        <UserName>root</UserName>
+        <Password>ttt01007</Password>
+        <NmonRoot>/home/nmon</NmonRoot>
+    </ServerConf>
+</root>
